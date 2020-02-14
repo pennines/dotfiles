@@ -1,0 +1,23 @@
+#!/usr/bin/env bash
+
+while true; do
+    volume="$(pamixer --get-volume)"
+    mute="$(pamixer --get-mute)"
+
+    if [[ "$mute" == "true" ]]; then
+        volume_icon=""
+    else
+        if [ $volume -gt 75 ]; then
+            volume_icon=""
+        elif [ $volume -gt 50 ]; then
+            volume_icon=""
+        elif [ $volume -gt 25 ]; then
+            volume_icon=""
+        else
+            volume_icon=""
+        fi
+    fi
+
+    echo "<fc=#e4e4e4><fn=2>${volume_icon}</fn></fc> ${volume}%"
+    sleep 0.5
+done

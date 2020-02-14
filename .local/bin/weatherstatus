@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+shopt -s extglob
+
+while true; do
+    response="$(curl -s wttr.in/300027?format="+%C+%t" | xargs)"
+    case "$response" in
+        *rain*|*Rain*|*raining*|*Raining*)
+            status_icon=""
+            ;;
+        *snow*|*Snow*|*snowing*|*Snowing*)
+            status_icon=""
+            ;;
+        *)
+            status_icon=""
+            ;;
+    esac
+    echo "<fn=2>${status_icon}</fn> ${response}"
+    sleep 1h
+done

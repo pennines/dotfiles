@@ -1,0 +1,49 @@
+/* vim: set syntax=css: */
+* {
+    /* Theme settings */
+    highlight: bold italic;
+    scrollbar: true;
+
+    /* Gruvbox dark colors */
+    seoul256-dark-bg0:          #262626;
+    seoul256-dark-bg0-soft:     #303030;
+    seoul256-dark-bg3:          #353535;
+    seoul256-dark-fg0:          #d0d0d0;
+    seoul256-dark-fg1:          #b0b0b0;
+    seoul256-dark-red-dark:     #d68787;
+    seoul256-dark-red-light:    #d75f87;
+    seoul256-dark-yellow-dark:  #d8af5f;
+    seoul256-dark-yellow-light: #ffd787;
+    seoul256-dark-gray:         #d0d0d0;
+
+    /* Theme colors */
+    background:                  @seoul256-dark-bg0;
+    background-color:            @background;
+    foreground:                  @seoul256-dark-fg1;
+    border-color:                @seoul256-dark-gray;
+    separatorcolor:              @border-color;
+    scrollbar-handle:            @border-color;
+
+    normal-background:           @background;
+    normal-foreground:           @foreground;
+    alternate-normal-background: @seoul256-dark-bg0-soft;
+    alternate-normal-foreground: @foreground;
+    selected-normal-background:  @seoul256-dark-bg3;
+    selected-normal-foreground:  @seoul256-dark-fg0;
+
+    active-background:           @seoul256-dark-yellow-dark;
+    active-foreground:           @background;
+    alternate-active-background: @active-background;
+    alternate-active-foreground: @active-foreground;
+    selected-active-background:  @seoul256-dark-yellow-light;
+    selected-active-foreground:  @active-foreground;
+
+    urgent-background:           @seoul256-dark-red-dark;
+    urgent-foreground:           @background;
+    alternate-urgent-background: @urgent-background;
+    alternate-urgent-foreground: @urgent-foreground;
+    selected-urgent-background:  @seoul256-dark-red-light;
+    selected-urgent-foreground:  @urgent-foreground;
+}
+
+@import "seoul256-common.rasi"
