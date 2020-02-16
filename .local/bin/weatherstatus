@@ -4,11 +4,14 @@ shopt -s extglob
 while true; do
     response="$(curl -s wttr.in/300027?format="+%C+%t" | xargs)"
     case "$response" in
-        *rain*|*Rain*|*raining*|*Raining*)
+        *rain*|*Rain*)
             status_icon=""
             ;;
-        *snow*|*Snow*|*snowing*|*Snowing*)
+        *snow*|*Snow*)
             status_icon=""
+            ;;
+        *mist*|*Mist*)
+            status_icon=""
             ;;
         *)
             status_icon=""

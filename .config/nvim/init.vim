@@ -3,7 +3,7 @@ call plug#begin(stdpath('data') . '/plugged')
 Plug 'morhetz/gruvbox'
 Plug 'junegunn/seoul256.vim'
 Plug 'itchyny/lightline.vim'
-Plug 'shinchu/lightline-gruvbox.vim'
+" Plug 'shinchu/lightline-gruvbox.vim'
 " Plug 'ryanoasis/vim-devicons'
 Plug 'lambdalisue/fern.vim'
 " Plug 'lambdalisue/fern-renderer-devicons.vim'
@@ -15,8 +15,12 @@ Plug 'godlygeek/tabular'
 Plug 'liuchengxu/vista.vim'
 Plug 'sheerun/vim-polyglot'
 Plug 'jremmen/vim-ripgrep'
+" Plug 'gko/vim-coloresque'
+Plug 'lilydjwg/colorizer'
 " Plug 'majutsushi/tagbar'
 call plug#end()
+
+" :so $VIMRUNTIME/syntax/hitest.vim
 
 " if executable('rg')
 "   set grepprg=rg\ --color=never
@@ -33,6 +37,8 @@ call plug#end()
 let g:python_highlight_all = 1
 let g:python_highlight_builtin_funcs = 0
 let g:python_highlight_space_errors = 0
+
+set guicursor=
 
 set updatetime=200
 
@@ -73,7 +79,7 @@ endfunction
 
 let mapleader=','
 nnoremap <c-n> :Fern . -toggle -drawer<cr>
-nnoremap <c-l> :noh<cr>
+nnoremap <c-l> :nohl<cr>
 nnoremap <leader>s :mksession!<cr>
 nnoremap <leader>r :source ~/.config/nvim/init.vim<cr>
 vnoremap <leader>t :Tab /

@@ -2,21 +2,23 @@ xterm*utf8: 1
 xterm*termName: xterm-256color
 xterm*allowBoldFonts: true
 xterm*boldMode: true
-xterm*font: xft:IBM Plex Mono:pixelsize=12.4:style=Medium
-xterm*boldFont: xft:IBM Plex Mono:pixelsize=12.4:style=Bold
+xterm*faceName: IBM Plex Mono:pixelsize=12.4:style=Medium
+xterm*faceNameDoublesize: WenQuanYi Micro Hei Mono:pixelsize=12.4
+!xterm*font: xft:IBM Plex Mono:pixelsize=12.4:style=Medium
+!xterm*boldFont: xft:IBM Plex Mono:pixelsize=12:style=Bold
 xterm*freeBoldBox: true
 xterm*forceBoxChars: true
 xterm*saveLines: 10240
 !xterm*font: xft:DejaVu Sans Mono:pixelsize=12.5
 !xterm*font: xft:Hack:pixelsize=12.1
-xterm*scaleHeight: 0.85
+xterm*scaleHeight: 1
 xterm*colorBDMode: true
 xterm*vt100.translations: #override \
 	Shift Ctrl <Key> C: copy-selection(CLIPBOARD) \n\
 	Shift Ctrl <Key> V: insert-selection(CLIPBOARD)
 xterm*metaSendsEscape: true
 xterm*eightBitInput: false
-xterm*internalBorder: 6
+xterm*internalBorder: 8
 
 Xft.dpi: 102
 Xft.autohint: 0

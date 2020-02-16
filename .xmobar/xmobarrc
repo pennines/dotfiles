@@ -1,7 +1,8 @@
 -- vim: set syntax=haskell:
 Config { font = "xft:IBM Plex Mono:pixelsize=12.4:style=SemiBold,WenQuanYi Micro Hei Mono:pixelsize=12.4"
        , additionalFonts = [ "xft:IBM Plex Mono:pixelsize=12.4:style=Bold,WenQuanYi Micro Hei Mono:pixelsize=12.4"
-                           , "xft:IcoMoon\-Ultimate:pixelsize=16" ]
+                           , "xft:IcoMoon\-Ultimate:pixelsize=16"
+                           , "xft:Pomodoro:pixelsize=18" ]
        , border = BottomB
        , borderColor = "#626262"
        -- , bgColor = "#262626"
@@ -15,7 +16,7 @@ Config { font = "xft:IBM Plex Mono:pixelsize=12.4:style=SemiBold,WenQuanYi Micro
        , alpha = 255
        , position = Top
        , textOffset = -1
-       , textOffsets = [ -1, 16 ]
+       , textOffsets = [ -1, 16, 17 ]
        , iconOffset = -1
        , lowerOnStart = True
        , pickBroadest = False
@@ -38,6 +39,7 @@ Config { font = "xft:IBM Plex Mono:pixelsize=12.4:style=SemiBold,WenQuanYi Micro
                     , Run CommandReader "volumestatus" "vols"
                     , Run CommandReader "weatherstatus" "weather"
                     -- , Run Com "padding-icon" ["stalonetray"] "tray" 10
+                    , Run CommandReader "pomidoru" "pomidoru"
                     -- , Run Kbd []
                     -- , Run Locks
                     ]
@@ -60,6 +62,7 @@ Config { font = "xft:IBM Plex Mono:pixelsize=12.4:style=SemiBold,WenQuanYi Micro
        -- ec4d - plug
        -- ea8e - vinyl
        -- ee54 - bat
+       -- 4 = up, 5 = down
        , template = "%StdinReader% }{\
        -- \<fn=2><fc=#e4e4e4></fc></fn> %mpds%\
        \<fn=2><fc=#e4e4e4></fc></fn> %mpd%\
@@ -68,9 +71,10 @@ Config { font = "xft:IBM Plex Mono:pixelsize=12.4:style=SemiBold,WenQuanYi Micro
        \ <action=`mpc next`><fn=2><fc=#e4e4e4></fc></fn></action>\
        \ : <fn=2><fc=#e4e4e4></fc></fn> %memory%\
        \ : <fn=2><fc=#e4e4e4></fc></fn> %multicpu%\
-       \ : %vols%\
+       \ : <action=`pamixer -d 5` button=5><action=`pamixer -i 5` button=4>%vols%</action></action>\
        \ : %bats%\
        \ : %weather%\
+       \ : %pomidoru%\
        \ : <fn=2><fc=#e4e4e4></fc></fn> %date%"
        }
 

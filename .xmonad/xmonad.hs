@@ -22,7 +22,7 @@ import qualified XMonad.StackSet                   as W
 
 import XMonad.Actions.Minimize
 -- import XMonad.Actions.UpdateFocus
--- import XMonad.Actions.UpdatePointer
+import XMonad.Actions.UpdatePointer
 
 import XMonad.Layout.Minimize
 import XMonad.Layout.NoBorders
@@ -288,14 +288,12 @@ myScratchpads = [ NS "scratchpad"
                      (customFloating $ center 0.7 0.7)
                 ]
 
-myManageHook = do
-    composeOne
-        [ isFullscreen -?> doFullFloat
-        , isDialog     -?> doCenterFloat ]
-    composeAll $
+myManageHook = composeAll $
         [ className =? "MPlayer"        --> doFloat
-        , className =? "Gimp"           --> doFloat ]
-        -- , className =? "feh"            --> (customFloating $ center 0.4 0.9) ]
+        , className =? "Gimp"           --> doFloat
+        , className =? "feh"            --> doCenterFloat
+        , isFullscreen                  --> doFullFloat
+        , isDialog                      --> doCenterFloat ]
         ++
         [ namedScratchpadManageHook myScratchpads
         , placeHook simpleSmart ]
@@ -355,7 +353,7 @@ myXmobar conf = do
                     }
         }
 
-myLogHook = return ()
+myLogHook = updatePointer (0.5, 0.5) (0, 0)
 
 ------------------------------------------------------------------------
 -- Startup hook
