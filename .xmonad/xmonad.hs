@@ -95,7 +95,8 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     [ ((modm .|. shiftMask, xK_Return), spawn $ XMonad.terminal conf)
 
     -- launch dmenu
-    , ((modm,               xK_p     ), spawn dmenuCommand)
+    , ((modm,               xK_p     ), spawn "rofi -show drun")
+    , ((modm .|. shiftMask, xK_p     ), spawn "rofi -show run")
 
     -- close focused window
     , ((modm .|. shiftMask, xK_c     ), kill)
@@ -210,8 +211,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
         | (key, sc) <- zip [xK_w, xK_e, xK_r] [0..]
         , (f, m) <- [(W.view, 0), (W.shift, shiftMask)]]
 
-    where dmenuCommand = "rofi -show drun"
-          notifyScreenshot = "; notify-send --app-name=scrot \"Saved Screenshot\""
+    where notifyScreenshot = "; notify-send --app-name=scrot \"Saved Screenshot\""
           centerPlacement = withGaps (16,0,16,0) (smart (0.5,0.5))
     -- dmenuCommand = "dmenu_run"
     --                ++ " -fn 'Fira Mono:pixelsize=12.1':style=Medium"
@@ -292,6 +292,7 @@ myManageHook = composeAll $
         [ className =? "MPlayer"        --> doFloat
         , className =? "Gimp"           --> doFloat
         , className =? "feh"            --> doCenterFloat
+        , className =? "Pinentry-gtk-2" --> doCenterFloat
         , isFullscreen                  --> doFullFloat
         , isDialog                      --> doCenterFloat ]
         ++
