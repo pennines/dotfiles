@@ -1,0 +1,50 @@
+/* Hide horizontal tabs at the top of the window */
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"); /* set default namespace to XUL */
+
+/*
+ * Hide tab bar, navigation bar and scrollbars
+ * !important may be added to force override, but not necessary
+ * #content is not necessary to hide scroll bars
+ */
+/* #TabsToolbar {visibility: collapse;} */
+/* #navigator-toolbox {visibility: collapse;} */
+/* browser {margin-right: -14px; margin-bottom: -14px;} */
+
+/* #content browser, .browserStack>browser { */
+/*  margin-right: -10px!important; */
+/*  margin-bottom: -10px!important; */
+/*  overflow-y: scroll; */
+/*  overflow-x: hidden; */
+/* } */
+
+#nav-bar:not([customizing="true"]):not([inFullscreen]) {
+ min-height: 0px !important;
+ max-height: 0px !important;
+ /* margin-top: 1px !important; */
+ margin-bottom: -1px !important;
+ /* transition: all 50ms linear 0s !important; */
+ z-index: -5 !important;
+}
+
+#navigator-toolbox:hover:not([inFullscreen]) :-moz-any(#nav-bar),
+#navigator-toolbox:focus-within :-moz-any(#nav-bar) {
+ min-height: 32px !important;
+ max-height: 32px !important;
+ margin-top: -1px !important;
+ margin-bottom: -32px !important;
+ /* transition: all 50ms linear 0s !important; */
+ z-index: 5 !important;
+ border-bottom: 1px solid #d0d0d0 !important;
+}
+
+#tabbrowser-tabs {
+  visibility: collapse !important;
+}
+
+#sidebar-header {
+  display: none;
+}
+
+#sidebar {
+  min-width: 100px !important;
+}
