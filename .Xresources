@@ -2,8 +2,9 @@ xterm*utf8: 1
 xterm*termName: xterm-256color
 xterm*allowBoldFonts: true
 xterm*boldMode: true
-xterm*faceName: IBM Plex Mono:pixelsize=12.4:style=Medium
-xterm*faceNameDoublesize: WenQuanYi Micro Hei Mono:pixelsize=12.4
+xterm*faceName: IBM Plex Mono:pixelsize=12.07:style=Medium
+!xterm*faceName: DejaVu Sans Mono:pixelsize=12.4:style=Medium
+xterm*faceNameDoublesize: WenQuanYi Micro Hei Mono:pixelsize=13.2
 !xterm*font: xft:IBM Plex Mono:pixelsize=12.4:style=Medium
 !xterm*boldFont: xft:IBM Plex Mono:pixelsize=12:style=Bold
 xterm*freeBoldBox: true
@@ -20,6 +21,10 @@ xterm*metaSendsEscape: true
 xterm*eightBitInput: false
 xterm*internalBorder: 8
 
+dzen2.font: IBM Plex Mono:pixelsize=12.4:style=Medium
+dzen2.background: #303030
+dezn2.foreground: #d0d0d0
+
 Xft.dpi: 102
 Xft.autohint: 0
 Xft.lcdfilter: lcddefault
@@ -28,86 +33,63 @@ Xft.hinting: 1
 Xft.antialias: 1
 Xft.rgba: rgb
 
-! seoul256 (dark) theme adapted for URxvt
-! append the content of this file to your .Xresources
+! special
+*.foreground:   #d0d0d0
+*.background:   #262626
+*.cursorColor:  #d0d0d0
+
+! black
+*.color0:       #262626
+*.color8:       #4c4c4c
+
+! red
+*.color1:       #ba3c38
+*.color9:       #d36f6c
+
+! green
+*.color2:       #5d8760
+*.color10:      #85ab88
+
+! yellow
+*.color3:       #d5a55f
+*.color11:      #e5c79c
+
+! blue
+*.color4:       #88b0d5
+*.color12:      #c1d6e9
+
+! magenta
+*.color5:       #cd5b6d
+*.color13:      #df96a1
+
+! cyan
+*.color6:       #61afac
+*.color14:      #94c9c7
+
+! white
+*.color7:       #d0cfca
+*.color15:      #f4f4f3
+
+! SEOUL 256 DARK
 ! *background: #262626
-*background: #303030
-*foreground: #d0d0d0
-*color0: #4e4e4e
-*color1: #d68787
-*color2: #5f865f
-*color3: #d8af5f
-*color4: #85add4
-*color5: #d7afaf
-*color6: #87afaf
-*color7: #d0d0d0
-*color8: #626262
-*color9: #d75f87
-*color10: #87af87
-*color11: #ffd787
-*color12: #add4fb
-*color13: #ffafaf
-*color14: #87d7d7
-*color15: #e4e4e4
-*cursorColor: #d0d0d0
-*cursorColor2: #3a3a3a
-*colorBD: #e4e4e4
-
-! ! hard contrast: *background: #f9f5d7
-! *background: #fbf1c7
-! ! soft contrast: *background: #f2e5bc
-! *foreground: #3c3836
-! ! Black + DarkGrey
-! *color0:  #fdf4c1
-! *color8:  #928374
-! ! DarkRed + Red
-! *color1:  #cc241d
-! *color9:  #9d0006
-! ! DarkGreen + Green
-! *color2:  #98971a
-! *color10: #79740e
-! ! DarkYellow + Yellow
-! *color3:  #d79921
-! *color11: #b57614
-! ! DarkBlue + Blue
-! *color4:  #458588
-! *color12: #076678
-! ! DarkMagenta + Magenta
-! *color5:  #b16286
-! *color13: #8f3f71
-! ! DarkCyan + Cyan
-! *color6:  #689d6a
-! *color14: #427b58
-! ! LightGrey + White
-! *color7:  #7c6f64
-! *color15: #3c3836
-
-! ! hard contrast: *background: #1d2021
-! ! *background: #1d2021
-! *background: #282828
-! ! soft contrast: *background: #32302f
-! *foreground: #ebdbb2
-! ! Black + DarkGrey
-! *color0:  #282828
-! *color8:  #928374
-! ! DarkRed + Red
-! *color1:  #cc241d
-! *color9:  #fb4934
-! ! DarkGreen + Green
-! *color2:  #98971a
-! *color10: #b8bb26
-! ! DarkYellow + Yellow
-! *color3:  #d79921
-! *color11: #fabd2f
-! ! DarkBlue + Blue
-! *color4:  #458588
-! *color12: #83a598
-! ! DarkMagenta + Magenta
-! *color5:  #b16286
-! *color13: #d3869b
-! ! DarkCyan + Cyan
-! *color6:  #689d6a
-! *color14: #8ec07c
-! ! LightGrey + White
-! *color7:  #a89984
-! *color15: #ebdbb2
+! *background: #303030
+! *foreground: #d0d0d0
+! *color0: #4e4e4e
+! *color1: #d68787
+! *color2: #5f865f
+! *color3: #d8af5f
+! *color4: #85add4
+! *color5: #d7afaf
+! *color6: #87afaf
+! *color7: #d0d0d0
+! *color8: #626262
+! *color9: #d75f87
+! *color10: #87af87
+! *color11: #ffd787
+! *color12: #add4fb
+! *color13: #ffafaf
+! *color14: #87d7d7
+! *color15: #e4e4e4
+! *cursorColor: #d0d0d0
+! *cursorColor2: #3a3a3a
+! *colorBD: #e4e4e4

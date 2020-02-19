@@ -27,6 +27,7 @@ import XMonad.Actions.UpdatePointer
 import XMonad.Layout.Minimize
 import XMonad.Layout.NoBorders
 import XMonad.Layout.Tabbed
+import XMonad.Layout.Spacing
 -- import XMonad.Layout.LayoutModifier
 
 import XMonad.Hooks.DynamicLog
@@ -83,8 +84,8 @@ myWorkspaces    = ["1","2","3","4","5","6","7","8","9"]
 --
 -- myNormalBorderColor  = "#3d3d3d"
 -- myFocusedBorderColor = "#aed4d5"
-myNormalBorderColor  = "#3a3a3a"
-myFocusedBorderColor = "#85add4"
+myNormalBorderColor  = "#4c4c4c"
+myFocusedBorderColor = "#85ab88"
 
 ------------------------------------------------------------------------
 -- Key bindings. Add, modify or remove key bindings here.
@@ -250,8 +251,10 @@ myMouseBindings (XConfig {XMonad.modMask = modm}) = M.fromList $
 -- which denotes layout choice.
 --
 
-myLayout = minimize $ smartBorders $ tiled ||| Mirror tiled ||| Full
+myLayout = spacing $ minimize $ smartBorders $ tiled ||| Mirror tiled ||| Full
   where
+     spacing = spacingRaw True (Border 0 0 0 0) False (Border 1 1 1 1) True
+
      -- default tiling algorithm partitions the screen into two panes
      tiled   = Tall nmaster delta ratio
 
@@ -325,7 +328,7 @@ logTitles ppFocus =
                           in if maybe False (== window) fw
                                then ppFocus name
                                else name
-        in withWindowSet $ liftM (Just . (intercalate " : ")) . windowTitles
+        in withWindowSet $ liftM (Just . (intercalate "<fc=#8c8c8c> : </fc>")) . windowTitles
 
 myXmobar conf = do
     h <- spawnPipe "xmobar ~/.xmobar/xmobarrc"
@@ -335,21 +338,22 @@ myXmobar conf = do
                 logHook conf
                 dynamicLogWithPP $ def
                     { ppOutput  = hPutStrLn h
-                    , ppCurrent = xmobarColor "#add4fb" "" . wrap "[" "]" . wrap "<fn=1>" "</fn>"
+                    , ppCurrent = xmobarColor "#c1d6e9" "" . wrap "[" "]" . wrap "<fn=1>" "</fn>"
                     -- Remove "Minimize" from the layout name.
                     , ppLayout  = (\x -> case x of
-                                         "Minimize Tall"        -> "Tall"
-                                         "Minimize Mirror Tall" -> "Mirror Tall"
-                                         "Minimize Full"        -> "Full"
+                                         "Spacing Minimize Tall"        -> "Tall"
+                                         "Spacing Minimize Mirror Tall" -> "Mirror Tall"
+                                         "Spacing Minimize Full"        -> "Full"
                                          _                      -> x
                                   )
+                    , ppSep     = "<fc=#8c8c8c> : </fc>"
                     -- Filter out NSP workspace from the output.
                     , ppHidden  = (\x -> case x of
                                          "NSP" -> ""
                                          _     -> x
                                   )
                     , ppOrder  = \(ws:l:_:e) -> [ws, l] ++ e
-                    , ppExtras = [ logTitles $ xmobarColor "#87af87" "" . wrap "<fn=1>" "</fn>" ]
+                    , ppExtras = [ logTitles $ xmobarColor "#85ab88" "" . wrap "<fn=1>" "</fn>" ]
                     -- , ppHiddenNoWindows = xmobarColor "#9c9c9c" ""
                     }
         }

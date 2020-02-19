@@ -18,6 +18,7 @@ while true; do
         fi
     fi
 
-    echo "<fc=#e4e4e4><fn=2>${volume_icon}</fn></fc> ${volume}%"
+    echo "<fc=#e4e4e4><fn=4>${volume_icon}</fn></fc> ${volume}%"
+    # echo "<fc=#e4e4e4><fn=4>${volume_icon}</fn></fc> ${volume}%"
     sleep 0.5
 done

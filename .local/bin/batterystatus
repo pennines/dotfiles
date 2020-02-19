@@ -9,6 +9,29 @@ while true; do
     bat1_capacity="$(cat /sys/class/power_supply/BAT1/capacity)"
     combined_capacity=$(( ($bat0_capacity + $bat1_capacity) / 2 ))
 
+    # case $ac_status in
+        # 0)
+        #     if [ $combined_capacity -gt 90 ]; then
+        #         bat_status_s=""
+        #     elif [ $combined_capacity -gt 75 ]; then
+        #         bat_status_s=""
+        #     elif [ $combined_capacity -gt 60 ]; then
+        #         bat_status_s=""
+        #     elif [ $combined_capacity -gt 45 ]; then
+        #         bat_status_s=""
+        #     elif [ $combined_capacity -gt 30 ]; then
+        #         bat_status_s=""
+        #     elif [ $combined_capacity -gt 15 ]; then
+        #         bat_status_s=""
+        #     else
+        #         bat_status_s=""
+        #     fi
+        #     ;;
+        # 1)
+        #     bat_status_s=""
+        #     ;;
+    # esac
+
     case $ac_status in
         0)
             if [ $combined_capacity -gt 90 ]; then

@@ -2,6 +2,7 @@
 call plug#begin(stdpath('data') . '/plugged')
 Plug 'morhetz/gruvbox'
 Plug 'junegunn/seoul256.vim'
+Plug 'danilo-augusto/vim-afterglow'
 Plug 'itchyny/lightline.vim'
 " Plug 'shinchu/lightline-gruvbox.vim'
 " Plug 'ryanoasis/vim-devicons'
@@ -16,7 +17,9 @@ Plug 'liuchengxu/vista.vim'
 Plug 'sheerun/vim-polyglot'
 Plug 'jremmen/vim-ripgrep'
 " Plug 'gko/vim-coloresque'
-Plug 'lilydjwg/colorizer'
+" Plug 'lilydjwg/colorizer'
+" Plug 'git@gitlab.com:yorickpeterse/happy_hacking.vim.git'
+Plug 'yorickpeterse/happy_hacking.vim'
 " Plug 'majutsushi/tagbar'
 call plug#end()
 
@@ -124,12 +127,12 @@ set wildmenu
 
 set termguicolors
 set background=dark
-let g:seoul256_background = 235
+let g:seoul256_background = 234
 colorscheme seoul256
 
 " Some tweaks
-highlight PMenu ctermbg=240 guibg=#585858 ctermfg=NONE guifg=NONE
-highlight PmenuThumb ctermbg=249 guibg=#b2b2b2
-highlight PmenuSbar ctermbg=234 guibg=#1c1c1c
+highlight PMenu ctermbg=0 guibg=#3f3f3f ctermfg=NONE guifg=NONE
+highlight PmenuThumb ctermbg=0 guibg=#f2f2f2
+highlight PmenuSbar ctermbg=0 guibg=#8c8c8c
 
 " colorscheme alduin

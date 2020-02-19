@@ -1,13 +1,14 @@
--- vim: set syntax=haskell:
-Config { font = "xft:IBM Plex Mono:pixelsize=12.4:style=SemiBold,WenQuanYi Micro Hei Mono:pixelsize=12.4"
-       , additionalFonts = [ "xft:IBM Plex Mono:pixelsize=12.4:style=Bold,WenQuanYi Micro Hei Mono:pixelsize=12.4"
+-- vim: set ft=haskell syntax=haskell:
+Config { font = "xft:IBM Plex Mono:pixelsize=12.07:style=SemiBold,WenQuanYi Micro Hei Mono:pixelsize=13"
+       , additionalFonts = [ "xft:IBM Plex Mono:pixelsize=12.07:style=Bold,WenQuanYi Micro Hei Mono:pixelsize=13"
                            , "xft:IcoMoon\-Ultimate:pixelsize=16"
-                           , "xft:Pomodoro:pixelsize=18" ]
+                           , "xft:Pomodoro:pixelsize=20"
+                           , "xft:IcoMoon\-Ultimate:pixelsize=14" ]
        , border = BottomB
        , borderColor = "#626262"
        -- , bgColor = "#262626"
-       , bgColor = "#303030"
-       , fgColor = "#d0d0d0"
+       , bgColor = "#141414"
+       , fgColor = "#d0cfca"
        -- , bgColor = "#282828"
        -- , fgColor = "#ebdbb2"
        -- , fgColor = "#ddd4bf"
@@ -16,7 +17,7 @@ Config { font = "xft:IBM Plex Mono:pixelsize=12.4:style=SemiBold,WenQuanYi Micro
        , alpha = 255
        , position = Top
        , textOffset = -1
-       , textOffsets = [ -1, 16, 17 ]
+       , textOffsets = [ -1, 16, 17, 16 ]
        , iconOffset = -1
        , lowerOnStart = True
        , pickBroadest = False
@@ -26,55 +27,30 @@ Config { font = "xft:IBM Plex Mono:pixelsize=12.4:style=SemiBold,WenQuanYi Micro
        , allDesktops = True
        , overrideRedirect = True
        , commands = [ Run StdinReader
-                    -- , Run Battery  ["-t", "<left>%", "-p", "3"] 10
                     , Run MultiCpu ["-t", "<total>%", "-p", "2"] 10
                     , Run Memory   ["-t", "<used>M/<total>M"] 10
-                    --, Run Swap     ["-t", "<used>M/<total>M"] 10
                     , Run Date "%F %H:%M" "date" 10
-                    -- , Run ComX "pamixer" ["--get-volume-human"] "--%" "vol" 10
-                    , Run MPD ["-t", "[<remaining>] <artist> - <title>", "-T", "40", "-E", "..."] 10
-                    -- , Run PipeReader "default text:/tmp/songscroller.tmp" "mpdmpd"
-                    -- , Run CommandReader "songscroller" "mpds"
+                    , Run MPD ["-t", "<artist> - <title>", "-T", "40", "-E", "..."] 10
                     , Run CommandReader "batterystatus" "bats"
                     , Run CommandReader "volumestatus" "vols"
                     , Run CommandReader "weatherstatus" "weather"
-                    -- , Run Com "padding-icon" ["stalonetray"] "tray" 10
-                    , Run CommandReader "pomidoru" "pomidoru"
-                    -- , Run Kbd []
-                    -- , Run Locks
+                    -- , Run CommandReader "pomidoru" "pomidoru"
                     ]
        , sepChar = "%"
        , alignSep = "}{"
---       , template = "%StdinReader% }{\
---       \   <fn=1><fc=#83a598>Memory</fc></fn> %memory%\
---       \ : <fn=1><fc=#83a598>CPU</fc></fn> %multicpu%\
---       \ : <fn=1><fc=#83a598>Volume</fc></fn>  %vol%\
---       \ : <fn=1><fc=#83a598>Battery</fc></fn> %battery%\
---       \ : <fn=1><fc=#83a598>Date</fc></fn> %date%"
--- #add4fb #e4e4e4
--- , template = "%StdinReader% }{\
--- \<fn=1><fc=#e4e4e4>MEM</fc></fn> %memory%\
--- \ : <fn=1><fc=#e4e4e4>CPU</fc></fn> %multicpu%\
--- \ : <fn=1><fc=#e4e4e4>VOL</fc></fn> %vol%\
--- \ : <fn=1><fc=#e4e4e4>BAT</fc></fn> %battery%\
--- \ : <fn=1><fc=#e4e4e4>DATe</fc></fn> %date%"
--- \<fn=2><fc=#e4e4e4></fc></fn> %mpd%\
-       -- ec4d - plug
-       -- ea8e - vinyl
-       -- ee54 - bat
-       -- 4 = up, 5 = down
        , template = "%StdinReader% }{\
        -- \<fn=2><fc=#e4e4e4></fc></fn> %mpds%\
-       \<fn=2><fc=#e4e4e4></fc></fn> %mpd%\
-       \ <action=`mpc prev`><fn=2><fc=#e4e4e4></fc></fn></action>\
-       \ <action=`mpc toggle`><fn=2><fc=#e4e4e4></fc></fn></action>\
-       \ <action=`mpc next`><fn=2><fc=#e4e4e4></fc></fn></action>\
-       \ : <fn=2><fc=#e4e4e4></fc></fn> %memory%\
-       \ : <fn=2><fc=#e4e4e4></fc></fn> %multicpu%\
-       \ : <action=`pamixer -d 5` button=5><action=`pamixer -i 5` button=4>%vols%</action></action>\
-       \ : %bats%\
-       \ : %weather%\
-       \ : %pomidoru%\
-       \ : <fn=2><fc=#e4e4e4></fc></fn> %date%"
+       \<fn=2></fn> %mpd%\
+       \ <action=`mpc prev`><fn=4></fn></action>\
+       \ <action=`mpc toggle`><fn=4></fn></action>\
+       \ <action=`mpc next`><fn=4></fn></action>\
+       -- \ %pomidoru%\
+       -- \ <fn=2></fn> %memory%\
+       -- \ ; <fn=2></fn> %multicpu%\
+       \ <fc=#8c8c8c>:</fc> <action=`pamixer -d 5` button=5><action=`pamixer -i 5` button=4>%vols%</action></action>\
+       \ <fc=#8c8c8c>:</fc> %bats%\
+       \ <fc=#8c8c8c>:</fc> %weather%\
+       -- \ <fc=#8c8c8c>:</fc> %pomidoru%\
+       \ <fc=#8c8c8c>:</fc> <fn=2></fn> %date%"
        }
 
