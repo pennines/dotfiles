@@ -3,7 +3,7 @@ call plug#begin(stdpath('data') . '/plugged')
 Plug 'morhetz/gruvbox'
 Plug 'junegunn/seoul256.vim'
 Plug 'danilo-augusto/vim-afterglow'
-Plug 'itchyny/lightline.vim'
+" Plug 'itchyny/lightline.vim'
 " Plug 'shinchu/lightline-gruvbox.vim'
 " Plug 'ryanoasis/vim-devicons'
 Plug 'lambdalisue/fern.vim'
@@ -56,9 +56,9 @@ set lazyredraw
 set listchars=tab:>\ ,trail:-,extends:>,precedes:<,nbsp:+
 set list
 
-let g:lightline = {
-      \ 'colorscheme': 'seoul256'
-      \ }
+" let g:lightline = {
+"       \ 'colorscheme': 'seoul256'
+"       \ }
 
 " Disable netrw
 let g:loaded_netrw = 1
@@ -127,12 +127,18 @@ set wildmenu
 
 set termguicolors
 set background=dark
-let g:seoul256_background = 234
+let g:seoul256_background = 233
 colorscheme seoul256
 
 " Some tweaks
 highlight PMenu ctermbg=0 guibg=#3f3f3f ctermfg=NONE guifg=NONE
 highlight PmenuThumb ctermbg=0 guibg=#f2f2f2
 highlight PmenuSbar ctermbg=0 guibg=#8c8c8c
+highlight VertSplit guifg=#202020 guibg=#202020
+highlight Normal guibg=#141414
+highlight LineNr guibg=#141414
+highlight ColorColumn guibg=#202020
+highlight StatusLineNC guifg=#202020
+highlight StatusLine guibg=#d0d0d0 guifg=#4c4c4c
 
 " colorscheme alduin

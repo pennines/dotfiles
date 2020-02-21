@@ -2,7 +2,7 @@
 Config { font = "xft:IBM Plex Mono:pixelsize=12.07:style=SemiBold,WenQuanYi Micro Hei Mono:pixelsize=13"
        , additionalFonts = [ "xft:IBM Plex Mono:pixelsize=12.07:style=Bold,WenQuanYi Micro Hei Mono:pixelsize=13"
                            , "xft:IcoMoon\-Ultimate:pixelsize=16"
-                           , "xft:Pomodoro:pixelsize=20"
+                           , "xft:Pomodoro:pixelsize=18"
                            , "xft:IcoMoon\-Ultimate:pixelsize=14" ]
        , border = BottomB
        , borderColor = "#626262"
@@ -33,8 +33,8 @@ Config { font = "xft:IBM Plex Mono:pixelsize=12.07:style=SemiBold,WenQuanYi Micr
                     , Run MPD ["-t", "<artist> - <title>", "-T", "40", "-E", "..."] 10
                     , Run CommandReader "batterystatus" "bats"
                     , Run CommandReader "volumestatus" "vols"
-                    , Run CommandReader "weatherstatus" "weather"
-                    -- , Run CommandReader "pomidoru" "pomidoru"
+                    -- , Run CommandReader "weatherstatus" "weather"
+                    , Run CommandReader "pomidoru" "pomidoru"
                     ]
        , sepChar = "%"
        , alignSep = "}{"
@@ -49,8 +49,8 @@ Config { font = "xft:IBM Plex Mono:pixelsize=12.07:style=SemiBold,WenQuanYi Micr
        -- \ ; <fn=2></fn> %multicpu%\
        \ <fc=#8c8c8c>:</fc> <action=`pamixer -d 5` button=5><action=`pamixer -i 5` button=4>%vols%</action></action>\
        \ <fc=#8c8c8c>:</fc> %bats%\
-       \ <fc=#8c8c8c>:</fc> %weather%\
-       -- \ <fc=#8c8c8c>:</fc> %pomidoru%\
+       -- \ <fc=#8c8c8c>:</fc> %weather%\
+       \ <fc=#8c8c8c>:</fc> %pomidoru%\
        \ <fc=#8c8c8c>:</fc> <fn=2></fn> %date%"
        }
 

@@ -17,6 +17,8 @@ alias srl='sr google -l'
 alias srg='sr google'
 alias s='srg'
 
+alias vb='. venv/bin/activate'
+
 # alias feh='feh --auto-zoom --scale-down --image-bg "#000000"'
 
 _bold="\[\e[1m\]"

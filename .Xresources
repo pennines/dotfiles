@@ -35,7 +35,7 @@ Xft.rgba: rgb
 
 ! special
 *.foreground:   #d0d0d0
-*.background:   #262626
+*.background:   #141414
 *.cursorColor:  #d0d0d0
 
 ! black
