@@ -34,7 +34,7 @@ Config { font = "xft:IBM Plex Mono:pixelsize=12.07:style=SemiBold,WenQuanYi Micr
                     , Run CommandReader "batterystatus" "bats"
                     , Run CommandReader "volumestatus" "vols"
                     -- , Run CommandReader "weatherstatus" "weather"
-                    , Run CommandReader "pomidoru" "pomidoru"
+                    -- , Run CommandReader "pomidoru" "pomidoru"
                     ]
        , sepChar = "%"
        , alignSep = "}{"
@@ -50,7 +50,7 @@ Config { font = "xft:IBM Plex Mono:pixelsize=12.07:style=SemiBold,WenQuanYi Micr
        \ <fc=#8c8c8c>:</fc> <action=`pamixer -d 5` button=5><action=`pamixer -i 5` button=4>%vols%</action></action>\
        \ <fc=#8c8c8c>:</fc> %bats%\
        -- \ <fc=#8c8c8c>:</fc> %weather%\
-       \ <fc=#8c8c8c>:</fc> %pomidoru%\
+       -- \ <fc=#8c8c8c>:</fc> %pomidoru%\
        \ <fc=#8c8c8c>:</fc> <fn=2></fn> %date%"
        }
 

@@ -20,6 +20,9 @@ Plug 'jremmen/vim-ripgrep'
 " Plug 'lilydjwg/colorizer'
 " Plug 'git@gitlab.com:yorickpeterse/happy_hacking.vim.git'
 Plug 'yorickpeterse/happy_hacking.vim'
+Plug 'farmergreg/vim-lastplace'
+Plug 'mhinz/vim-signify'
+" Plug 'severin-lemaignan/vim-minimap'
 " Plug 'majutsushi/tagbar'
 call plug#end()
 
@@ -100,7 +103,7 @@ set shiftwidth=4
 " since they are less annoying.
 filetype indent off
 set autoindent
-set smartindent
+" set smartindent
 set copyindent
 
 " set wrap

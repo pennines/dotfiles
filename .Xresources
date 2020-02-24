@@ -2,6 +2,7 @@ xterm*utf8: 1
 xterm*termName: xterm-256color
 xterm*allowBoldFonts: true
 xterm*boldMode: true
+!xterm*faceName: Hack:pixelsize=12.07:style=Medium
 xterm*faceName: IBM Plex Mono:pixelsize=12.07:style=Medium
 !xterm*faceName: DejaVu Sans Mono:pixelsize=12.4:style=Medium
 xterm*faceNameDoublesize: WenQuanYi Micro Hei Mono:pixelsize=13.2
