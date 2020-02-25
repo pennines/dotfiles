@@ -5,16 +5,16 @@
     scrollbar: true;
 
     /* Gruvbox dark colors */
-    seoul256-dark-bg0:          #262626;
-    seoul256-dark-bg0-soft:     #303030;
-    seoul256-dark-bg3:          #353535;
+    seoul256-dark-bg0:          #141414;
+    seoul256-dark-bg0-soft:     #262626;
+    seoul256-dark-bg3:          #4c4c4c;
     seoul256-dark-fg0:          #d0d0d0;
-    seoul256-dark-fg1:          #b0b0b0;
-    seoul256-dark-red-dark:     #d68787;
-    seoul256-dark-red-light:    #d75f87;
-    seoul256-dark-yellow-dark:  #d8af5f;
-    seoul256-dark-yellow-light: #ffd787;
-    seoul256-dark-gray:         #d0d0d0;
+    seoul256-dark-fg1:          #d0cfca;
+    seoul256-dark-red-dark:     #ba3c38;
+    seoul256-dark-red-light:    #d36f6c;
+    seoul256-dark-yellow-dark:  #d5a55f;
+    seoul256-dark-yellow-light: #e5c79c;
+    seoul256-dark-gray:         #f4f4f3;
 
     /* Theme colors */
     background:                  @seoul256-dark-bg0;
