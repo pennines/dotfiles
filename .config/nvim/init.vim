@@ -137,11 +137,18 @@ colorscheme seoul256
 highlight PMenu ctermbg=0 guibg=#3f3f3f ctermfg=NONE guifg=NONE
 highlight PmenuThumb ctermbg=0 guibg=#f2f2f2
 highlight PmenuSbar ctermbg=0 guibg=#8c8c8c
-highlight VertSplit guifg=#202020 guibg=#202020
+highlight VertSplit guifg=#141414 guibg=#141414
 highlight Normal guibg=#141414
 highlight LineNr guibg=#141414
 highlight ColorColumn guibg=#202020
-highlight StatusLineNC guifg=#202020
-highlight StatusLine guibg=#d0d0d0 guifg=#4c4c4c
+highlight StatusLineNC guibg=#4c4c4c guifg=#141414
+highlight StatusLine guibg=#d0d0d0 guifg=#141414
+highlight SignColumn guibg=#141414
+" highlight ColorColumn guibg=#141414
+highlight IndentGuidesEven guibg=#141414
+
+highlight SignifySignAdd guibg=#141414 guifg=#5d8760
+highlight SignifySignChange guibg=#141414 guifg=#88b0d5
+highlight SignifySignDelete guibg=#141414 guifg=#ba3c38
 
 " colorscheme alduin
