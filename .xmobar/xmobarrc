@@ -30,7 +30,8 @@ Config { font = "xft:IBM Plex Mono:pixelsize=12.07:style=SemiBold,WenQuanYi Micr
                     , Run MultiCpu ["-t", "<total>%", "-p", "2"] 10
                     , Run Memory   ["-t", "<used>M/<total>M"] 10
                     , Run Date "%F %H:%M" "date" 10
-                    , Run MPD ["-t", "<artist> - <title>", "-T", "40", "-E", "..."] 10
+                    -- , Run MPD ["-t", "<artist> - <title>", "-T", "40", "-E", "..."] 10
+                    , Run Mpris2 "spotify" ["-t", "<artist> - <title>"] 10
                     , Run CommandReader "batterystatus" "bats"
                     , Run CommandReader "volumestatus" "vols"
                     -- , Run CommandReader "weatherstatus" "weather"
@@ -40,10 +41,11 @@ Config { font = "xft:IBM Plex Mono:pixelsize=12.07:style=SemiBold,WenQuanYi Micr
        , alignSep = "}{"
        , template = "%StdinReader% }{\
        -- \<fn=2><fc=#e4e4e4></fc></fn> %mpds%\
-       \<fn=2></fn> %mpd%\
-       \ <action=`mpc prev`><fn=4></fn></action>\
-       \ <action=`mpc toggle`><fn=4></fn></action>\
-       \ <action=`mpc next`><fn=4></fn></action>\
+       \<fn=2></fn> %mpris2%\
+       -- \<fn=2></fn> %mpd%\
+       -- \ <action=`mpc prev`><fn=4></fn></action>\
+       -- \ <action=`mpc toggle`><fn=4></fn></action>\
+       -- \ <action=`mpc next`><fn=4></fn></action>\
        -- \ %pomidoru%\
        -- \ <fn=2></fn> %memory%\
        -- \ ; <fn=2></fn> %multicpu%\

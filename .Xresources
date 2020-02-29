@@ -1,18 +1,22 @@
 xterm*utf8: 1
 xterm*termName: xterm-256color
-xterm*allowBoldFonts: true
-xterm*boldMode: true
+xterm*allowBoldFonts: false
+xterm*boldMode: false
+!xterm*faceName: Fira Mono:pixelsize=12.2:style=Medium
 !xterm*faceName: Hack:pixelsize=12.07:style=Medium
 xterm*faceName: IBM Plex Mono:pixelsize=12.07:style=Medium
+!xterm*faceName: SF Mono:pixelsize=12.7:style=SemiBold
+!xterm*faceName: Roboto Mono:pixelsize=12:style=SemiBold
 !xterm*faceName: DejaVu Sans Mono:pixelsize=12.4:style=Medium
-xterm*faceNameDoublesize: WenQuanYi Micro Hei Mono:pixelsize=13.2
+!xterm*faceNameDoublesize: WenQuanYi Micro Hei Mono:pixelsize=13.2
 !xterm*font: xft:IBM Plex Mono:pixelsize=12.4:style=Medium
 !xterm*boldFont: xft:IBM Plex Mono:pixelsize=12:style=Bold
 xterm*freeBoldBox: true
 xterm*forceBoxChars: true
 xterm*saveLines: 10240
-!xterm*font: xft:DejaVu Sans Mono:pixelsize=12.5
+!xterm*font: xft:DejaVu Sans Mono:pixelsize=12
 !xterm*font: xft:Hack:pixelsize=12.1
+!xterm*font: xft:Source Code Pro:style=Medium:pixelsize=12.6
 xterm*scaleHeight: 1
 xterm*colorBDMode: true
 xterm*vt100.translations: #override \

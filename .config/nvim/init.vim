@@ -24,6 +24,7 @@ Plug 'farmergreg/vim-lastplace'
 Plug 'mhinz/vim-signify'
 " Plug 'severin-lemaignan/vim-minimap'
 " Plug 'majutsushi/tagbar'
+Plug 'mattn/emmet-vim'
 call plug#end()
 
 " :so $VIMRUNTIME/syntax/hitest.vim
@@ -117,16 +118,29 @@ function ToggleCC()
         set cc=
         let g:cc_status = 0
     else
-        set cc=80,100,120
+        set cc=72,80,100
         let g:cc_status = 1
     endif
 endfunction
 nnoremap <leader>c :call ToggleCC()<cr>
 
+augroup fern-custom
+  autocmd! *
+  autocmd FileType fern set nonu
+augroup END
+
 set number
 
 set clipboard=unnamedplus
 set wildmenu
+
+set statusline=
+set statusline+=%-00.4(%m\ %)
+set statusline+=%t
+set statusline+=%=
+set statusline+=[%l/%L]
+
+set nowrap
 
 set termguicolors
 set background=dark
@@ -142,11 +156,10 @@ highlight Normal guibg=#141414
 highlight LineNr guibg=#141414
 highlight ColorColumn guibg=#202020
 highlight StatusLineNC guibg=#4c4c4c guifg=#141414
-highlight StatusLine guibg=#d0d0d0 guifg=#141414
+highlight StatusLine guibg=#d0d0d0 guifg=#242424
 highlight SignColumn guibg=#141414
-" highlight ColorColumn guibg=#141414
+highlight NonText guifg=#202020
 highlight IndentGuidesEven guibg=#141414
-
 highlight SignifySignAdd guibg=#141414 guifg=#5d8760
 highlight SignifySignChange guibg=#141414 guifg=#88b0d5
 highlight SignifySignDelete guibg=#141414 guifg=#ba3c38
