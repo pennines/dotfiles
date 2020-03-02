@@ -111,8 +111,8 @@ set copyindent
 " set wrapmargin=120
 " set textwidth=80
 
-let g:cc_status = 0
-set cc=
+let g:cc_status = 1
+set cc=72,80,100
 function ToggleCC()
     if g:cc_status == 1
         set cc=
@@ -142,6 +142,8 @@ set statusline+=[%l/%L]
 
 set nowrap
 
+set showmatch
+
 set termguicolors
 set background=dark
 let g:seoul256_background = 233
@@ -158,10 +160,8 @@ highlight ColorColumn guibg=#202020
 highlight StatusLineNC guibg=#4c4c4c guifg=#141414
 highlight StatusLine guibg=#d0d0d0 guifg=#242424
 highlight SignColumn guibg=#141414
-highlight NonText guifg=#202020
 highlight IndentGuidesEven guibg=#141414
 highlight SignifySignAdd guibg=#141414 guifg=#5d8760
 highlight SignifySignChange guibg=#141414 guifg=#88b0d5
 highlight SignifySignDelete guibg=#141414 guifg=#ba3c38
-
 " colorscheme alduin
